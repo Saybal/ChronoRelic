@@ -1,0 +1,87 @@
+[
+  {
+    "period": "Indian Subcontinent (Vedic Period)",
+    "short_description": "Early civilization with Vedic texts, rituals, and the foundation of Hinduism, known for its philosophical depth and early mathematics, influencing spiritual and intellectual traditions.",
+    "artifact_example": "Rigveda manuscript",
+    "image_url": "https://i.ibb.co/9mTfKdzx/image.png"
+  },
+  {
+    "period": "Maurya Empire (India)",
+    "short_description": "A unified Indian empire with advanced administration and the spread of Buddhism, noted for the Ashoka Pillars and edicts, promoting peace and cultural unity across regions.",
+    "artifact_example": "Ashoka Pillar",
+    "image_url": "https://i.ibb.co/TMPMwrTh/image.png"
+  },
+  {
+    "period": "Thailand (Sukhothai Kingdom)",
+    "short_description": "Early Thai kingdom known for its art, architecture, and the introduction of Theravada Buddhism, featuring stunning temples and early governance systems in Southeast Asia.",
+    "artifact_example": "Wat Mahathat Buddha",
+    "image_url": "https://i.ibb.co/ZRDzW9xT/image.png"
+  },
+  {
+    "period": "Ancient Persia",
+    "short_description": "A vast empire known for its tolerance and administrative innovations, with monumental architecture and the spread of Zoroastrianism, influencing governance and culture across regions.",
+    "artifact_example": "Persepolis relief",
+    "image_url": "https://i.ibb.co/4ZYHTsM5/image.png"
+  },
+  {
+    "period": "Mesopotamia",
+    "short_description": "The cradle of civilization, where writing and the first cities began, known for its advanced irrigation systems and early legal codes, shaping human society with innovations in agriculture and urban development.",
+    "artifact_example": "Cuneiform tablet",
+    "image_url": "https://i.ibb.co/v6xtytWf/image.png"
+  },
+  {
+    "period": "Indus Valley",
+    "short_description": "A planned urban culture rich in art and drainage systems, with sophisticated city planning, showcasing early sanitation and trade networks, influencing urban design across ancient civilizations.",
+    "artifact_example": "Dancing Girl statue",
+    "image_url": "https://i.ibb.co/zhCjhvBj/image.png"
+  },
+  {
+    "period": "Ancient Egypt",
+    "short_description": "Empire of pyramids, pharaohs, and sacred rituals, renowned for monumental architecture and mummification, leaving a legacy of art, science, and religious practices that influenced later cultures.",
+    "artifact_example": "Mask of Tutankhamun",
+    "image_url": "https://i.ibb.co/8gV1Pdc3/image.png"
+  },
+  {
+    "period": "Ancient Greece",
+    "short_description": "Birthplace of democracy, drama, and philosophy, famous for its cultural and intellectual contributions, including theater, mathematics, and architecture, shaping Western thought and governance.",
+    "artifact_example": "Parthenon sculpture",
+    "image_url": "https://i.ibb.co/hJy4Mdzp/image.png"
+  },
+  {
+    "period": "Ancient Rome",
+    "short_description": "A powerful empire of engineering, law, and architecture, known for its vast road networks and aqueducts, establishing a foundation for modern legal systems and infrastructure.",
+    "artifact_example": "Roman aqueduct model",
+    "image_url": "https://i.ibb.co/9mhSmPtB/image.png"
+  },
+  {
+    "period": "Ancient China",
+    "short_description": "Dynastic rule, silk, and ancient philosophy, celebrated for the invention of paper, gunpowder, and the Great Wall, influencing global trade and cultural exchange significantly.",
+    "artifact_example": "Terracotta Warrior",
+    "image_url": "https://i.ibb.co/gbzr2vZJ/image.png"
+  },
+  {
+    "period": "Mesoamerica",
+    "short_description": "The Maya, Aztec, and Olmec — civilizations of astronomy and pyramids, noted for precise calendars and complex writing systems, impacting scientific and architectural advancements.",
+    "artifact_example": "Mayan calendar stone",
+    "image_url": "https://i.ibb.co/0VhY5jqh/image.png"
+  },
+  {
+    "period": "Medieval Europe",
+    "short_description": "Era of feudalism, castles, and the rise of the Catholic Church, marked by Gothic architecture and the Crusades, shaping medieval society and religious institutions.",
+    "artifact_example": "Bayeux Tapestry",
+    "image_url": "https://i.ibb.co/cXs175dC/image.png"
+  },
+  {
+    "period": "Renaissance",
+    "short_description": "Rebirth of art, science, and humanism in Europe, highlighted by advancements in painting techniques and exploration, reviving classical knowledge and inspiring modernity.",
+    "artifact_example": "Mona Lisa",
+    "image_url": "https://i.ibb.co/tpk7S8TW/image.png"
+  },
+  {
+    "period": "Industrial Revolution",
+    "short_description": "Transformation through mechanization and factory systems, driving urbanization and technology, with innovations like the steam engine reshaping economies and lifestyles globally.",
+    "artifact_example": "Steam engine model",
+    "image_url": "https://i.ibb.co/CsPpJ0dj/pollution-industrial-revolution-gettyimages-587493886-a-BAVAZGDX0.jpg"
+  }
+  
+]

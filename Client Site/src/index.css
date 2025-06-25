@@ -1,0 +1,80 @@
+/* !Title Font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* !Normal Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Define or override your breakpoints here */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1280px; /* <--- This is the key change for you */
+  --breakpoint-xl: 1536px;
+  --breakpoint-2xl: 1920px;
+
+  /* You can also add custom breakpoints if you wish, e.g.: */
+  --breakpoint-desktop-large: 1400px;
+}
+@plugin "daisyui"{
+  themes: acid --default, sunset --prefersdark;
+}
+
+
+.title-font {
+  font-family: "Cormorant Garamond";
+}
+
+.normal-font {
+  font-family: "Nunito";
+
+}
+
+
+.active {
+ 
+  border: 1px solid rgba(255, 255, 255, 0.728);
+  border-radius: 12px;
+}
+
+
+
+.theme-wrapper {
+  min-height: 100vh;
+  padding: 1rem;
+  transition: all 0.5s ease;
+}
+
+.App {
+  background-color: #eee;
+  width: 100vw;
+  height: 100vh;
+}
+
+.search-bar-container {
+  padding-top: 20vh;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+
+.marquee-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-container > * {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+
+

@@ -35,7 +35,7 @@ It includes secure authentication, private dashboards, and thematic design inspi
 
 ## Website Demo
 
-[Visit Live Site »](https://assignment-11-15175.web.app/)
+[Visit Live Site »](https://chornorelic.web.app/)
 
 
 ## Tech Stack

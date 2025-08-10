@@ -263,6 +263,26 @@ async function run() {
       }
     });
 
+    // !Artifact Map API
+    app.get("/artifact-map", async (req, res) => {
+      try {
+        const artifacts = await all_artifacts.find(
+          {},
+          { projection: {
+          "Artifact-Name": 1,
+          "Artifact-Image": 1,
+          "Latitude": 1,
+          "Longitude": 1,
+          "_id": 0 // Exclude the _id field
+        } }
+        ).toArray();
+        res.send(artifacts);
+      } catch (error) {
+        console.error("Error fetching artifact map data:", error);
+        res.status(500).json({ success: false, message: "Server error" });
+      }
+    });
+
     // !Update put API
     app.put("/update/:id", async (req, res) => {
       const id = req.params.id;

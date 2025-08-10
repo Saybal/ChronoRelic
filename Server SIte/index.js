@@ -170,6 +170,99 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/artifact-of-the-week", async (req, res) => {
+      try {
+        const now = new Date();
+
+        // End of today in UTC
+        const end = new Date(
+          Date.UTC(
+            now.getUTCFullYear(),
+            now.getUTCMonth(),
+            now.getUTCDate(),
+            23,
+            59,
+            59,
+            999
+          )
+        );
+
+        // Start = 7 days before end, beginning of day in UTC
+        const start = new Date(end);
+        start.setUTCDate(start.getUTCDate() - 7);
+        start.setUTCHours(0, 0, 0, 0);
+
+        console.log("Start (UTC):", start.toISOString());
+        console.log("End (UTC):", end.toISOString());
+
+        // Step 1: Try hidden gems first (likes < 5)
+        let candidates = await all_artifacts
+          .find({
+            $expr: {
+              $and: [
+                {
+                  $gte: [
+                    { $dateFromString: { dateString: "$Posted-Date" } },
+                    start,
+                  ],
+                },
+                {
+                  $lte: [
+                    { $dateFromString: { dateString: "$Posted-Date" } },
+                    end,
+                  ],
+                },
+                { $lt: ["$Like-Count", 4000] },
+              ],
+            },
+          })
+          .toArray();
+
+        console.log("Hidden gems:", candidates);
+
+        // Step 2: If no hidden gems, fetch all artifacts from last 7 days
+        if (candidates.length === 0) {
+          candidates = await all_artifacts
+            .find({
+              $expr: {
+                $and: [
+                  {
+                    $gte: [
+                      { $dateFromString: { dateString: "$Posted-Date" } },
+                      start,
+                    ],
+                  },
+                  {
+                    $lte: [
+                      { $dateFromString: { dateString: "$Posted-Date" } },
+                      end,
+                    ],
+                  },
+                ],
+              },
+            })
+            .toArray();
+          console.log("All recent artifacts:", candidates);
+        }
+
+        // Step 3: Pick one random artifact
+        if (candidates.length > 0) {
+          const crypto = require("crypto");
+          const randomIndex = crypto.randomInt(0, candidates.length);
+          const randomArtifact = candidates[randomIndex];
+          return res.json(randomArtifact);
+        }
+
+        // Step 4: No artifacts found
+        res.status(404).json({ message: "No recent artifacts found" });
+      } catch (error) {
+        res.status(500).json({
+          message: "Error fetching artifact of the week",
+          error,
+        });
+      }
+    });
+
     // !Update put API
     app.put("/update/:id", async (req, res) => {
       const id = req.params.id;

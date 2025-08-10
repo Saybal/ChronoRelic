@@ -4,10 +4,12 @@ import { AuthContext } from "../../Hooks/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { Link } from "react-router";
+import { useTheme } from "../../Hooks/useTheme";
 
 const Featured_card = ({ artifact }) => {
   const { user } = use(AuthContext);
   const [like, setLike] = useState(artifact["Liked-By"].includes(user?.email));
+  const currentTheme = useTheme();
 
   const handleLike = () => {
     if (user?.email === artifact.Email) {
@@ -36,7 +38,7 @@ const Featured_card = ({ artifact }) => {
     }
     setLike(!like);
 
-    axios.patch(`https://artifacts-tracker-sable.vercel.app/all-artifacts/${artifact._id}`, {
+    axios.patch(`http://localhost:3000/all-artifacts/${artifact._id}`, {
 
       "Liked-By": artifact["Liked-By"],
       "Like-Count": artifact["Like-Count"]
@@ -45,7 +47,7 @@ const Featured_card = ({ artifact }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg overflow-hidden">
+    <div className={`${currentTheme === 'acid' ? "bg-white" : "bg-[#F5F2EB]"} shadow-lg overflow-hidden`}>
       <div
         className="relative h-[20rem] flex-1 bg-cover bg-no-repeat bg-center"
         style={{
@@ -68,7 +70,7 @@ const Featured_card = ({ artifact }) => {
       </div>
       <div className="p-4 space-y-2 text-sm">
         <div className="flex items-center justify-between">
-          <span className=" font-semibold">
+          <span className=" font-semibold text-black">
             {" "}
             <span className="normal-font font-bold text-[#960018]">
               Created At:{" "}
@@ -78,7 +80,7 @@ const Featured_card = ({ artifact }) => {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className=" font-semibold">
+          <span className=" font-semibold text-black">
             {" "}
             <span className="normal-font font-bold text-[#960018]">
               Posted By:{" "}
@@ -104,7 +106,7 @@ const Featured_card = ({ artifact }) => {
           </div>
         </div>
 
-        <div className="h-[10rem] normal-font text-justify">
+        <div className="h-[10rem] normal-font text-justify text-black">
           {artifact["Short-Description"]}
         </div>
         <Link to={`/artifact-details/${artifact._id}`} className="btn mt-4 w-full bg-[#800020] text-white normal-font font-semibold py-2 rounded-xl hover:bg-[#960018]">

@@ -50,7 +50,11 @@ const Home = () => {
 
           <Featured_sec />
 
+          <ArtifactOfTheWeekContainer/>
+
           <TimeLine />
+
+          <ArtifactMapContainer/>
 
           <Curator_Body />
         </>

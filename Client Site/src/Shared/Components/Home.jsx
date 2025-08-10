@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#ECE7E1]">
+    <div className={`min-h-screen ${currentTheme === 'acid' ? "bg-[#ECE7E1]" : "bg-[#1E1B18]"} `}>
       {loading ? (
         <Loading />
       ) : (
